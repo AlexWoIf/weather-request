@@ -1,3 +1,4 @@
 .*
+.idea
 !/.gitignore
 capture_weather_data.md
