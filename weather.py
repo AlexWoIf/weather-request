@@ -1,10 +1,10 @@
-# -*- coding: utf-8 -*-
 import requests
 
 
 def request_weather(place):
-    url = f'https://wttr.in/{place}?nTqMm&lang=ru'
-    response = requests.get(url)
+    url = f'https://wttr.in/{place}'
+    params = {'nTqMm':'', 'lang':'ru',}
+    response = requests.get(url, params)
     response.raise_for_status()
     return response.text
 
