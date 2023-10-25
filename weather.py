@@ -1,9 +1,10 @@
 import requests
 
+DEFAULT_PARAMS = {'nTqMm': '', 'lang': 'ru', }
 
-def request_weather(place):
+
+def request_weather(place, params=DEFAULT_PARAMS):
     url = f'https://wttr.in/{place}'
-    params = {'nTqMm':'', 'lang':'ru',}
     response = requests.get(url, params)
     response.raise_for_status()
     return response.text
